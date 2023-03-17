@@ -7,15 +7,13 @@ function simpleNum(x) {
     let checkNum = x.constructor === Number;
     if (checkNum == true) {
 
-        for (let i = 2; i < x; i++) {
-            if (x % i === 0) {
+            if (x % 2 === 0) {
                 return false;
             } else {
                 return true;
             }
-        }
     } else {
         console.log('nomre deyil!');
     }
 }
-console.log(simpleNum(2));
+console.log(simpleNum(109));
