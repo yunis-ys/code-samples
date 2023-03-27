@@ -1,5 +1,5 @@
 
-// 6. Düymələrin dəyərlərə, dəyərlərin isə düymələrə çevrildiyi obyektin 
+// 1. Düymələrin dəyərlərə, dəyərlərin isə düymələrə çevrildiyi obyektin 
 // surətini almaq üçün JavaScript funksiyasını yazın..
 
 const obj1 = {
@@ -8,12 +8,10 @@ const obj1 = {
 };
 
 function reverseObj(obj) {
-    let test = Object.entries(obj);
 
-   for(let i = 0; i < test.length; i++) {
-    console.log(test[i]);
-   }
-    
+    let arr = Object.entries(obj).map(([key, value]) => [value, key]);
+    let arrToObj = Object.fromEntries(arr);
+    console.log(arrToObj);
 }
 
 reverseObj(obj1);
